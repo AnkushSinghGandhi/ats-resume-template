@@ -1,0 +1,128 @@
+% -----------------------------------------------------------------------------
+% ASG ATS Resume - 1-Page Minimalist LaTeX Template
+% -----------------------------------------------------------------------------
+% Title: ASG ATS Resume
+% Author: Ankush Singh Gandhi
+%
+% Description:
+% A clean, recruiter-friendly 1-page resume template optimized for
+% Applicant Tracking Systems (ATS).
+%
+% Key Features:
+% - Uses Tinos font for a professional and readable style
+% - Thin section separators (simple lines, not bold)
+% - Project titles in bold, descriptions in regular text
+% - Exact alignment with tabular* for consistent formatting
+% - Compact design for fitting all key information on one page
+%
+% How to Use:
+% - Compile with XeLaTeX or LuaLaTeX (required for custom fonts)
+% - Replace placeholders with your own details
+% - Adjust spacing/macros if adding or removing sections
+%
+% License: MIT (free to use, modify, and share)
+% -----------------------------------------------------------------------------
+\documentclass[a4paper,10.5pt]{article}
+\usepackage[margin=0.45in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+\usepackage{fontspec}
+\setmainfont{Tinos}
+\renewcommand{\baselinestretch}{0.95}
+
+\setlength{\parindent}{0pt}
+% Force bullet symbol for itemize
+\setlist[itemize]{leftmargin=*, topsep=2pt, parsep=0pt, partopsep=0pt, itemsep=3pt, label=\textbullet}
+\renewcommand{\labelitemi}{\textbullet}
+\pagestyle{empty}
+
+% Section command: UPPERCASE bold heading + thin rule
+\newcommand{\Section}[1]{\vspace{6pt}\noindent{\large\bfseries\MakeUppercase{#1}}\\\noindent\rule{\textwidth}{0.4pt}\vspace{6pt}}
+
+% Job line helper
+\newcommand{\JobLine}[2]{\noindent\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}#1 & #2\\\end{tabular*}}
+
+\begin{document}
+
+% HEADER
+\vspace*{-0.9cm}
+\begin{center}
+  {\LARGE\bfseries Ankush Singh Gandhi}\\[3pt]
+  +91-95296-39652 \; $|$ \; \href{mailto:ankushsinghgandhi@gmail.com}{ankushsinghgandhi@gmail.com} \; $|$ \; \href{https://linkedin.com/in/ankushsinghgandhi}{linkedin.com/in/ankushsinghgandhi} \\
+  \href{https://github.com/ankushsinghgandhi}{github.com/ankushsinghgandhi} \; $|$ \; \href{https://leetcode.com/u/ankushsinghgandhi}{leetcode.com/u/ankushsinghgandhi} \; $|$ \; \href{https://warriorwhocodes.com/}{warriorwhocodes.com}
+\end{center}
+
+% SUMMARY
+\Section{Summary}
+{\small {\bfseries Python Backend Developer} with {\bfseries 3 years of experience} designing and scaling {\bfseries REST APIs} and {\bfseries microservices} using {\bfseries Flask} and {\bfseries Django}. Skilled in database design {\bfseries (MySQL, MongoDB, Redis)}, cloud deployment {\bfseries (AWS, Docker)}, and CI/CD pipelines {\bfseries (GitHub Actions)}. Experienced in real-time data systems, {\bfseries WebSockets}, and {\bfseries caching} for high-performance fintech applications. Strong focus on clean architecture, security, and agile delivery.}
+
+% EXPERIENCE
+\Section{Experience}
+
+\JobLine{{\bfseries Software Developer}\\\textit{Desi Diaries Pvt. Ltd. | Jaipur}}{May 2023 -- Present}
+\begin{itemize}
+  \item Developed {\bfseries Flask + MongoDB} {\bfseries microservices} for trading tools and analytics, enabling real-time processing for 5+ strategies
+  \item Retrieved ATM price, volatility, and PCR values via {\bfseries Global Data Feeds APIs} and {\bfseries WebSockets}, improving data freshness by 40\%
+  \item Implemented personalized user dashboards with {\bfseries live data feeds} and heatmaps, improving traders' profitability by 10\%
+  \item Built services with {\bfseries Django + MySQL}, leveraging {\bfseries ORM} for role-based portfolio management, improving data accuracy by 25\%
+  \item Integrated {\bfseries Redis} caching, {\bfseries JWT} auth, and CI/CD pipelines ({\bfseries GitHub Actions} + {\bfseries Docker}), cutting deployment time by 50\% 
+\end{itemize}
+
+\vspace{2pt}
+\JobLine{{\bfseries Flutter Developer Intern}\\\textit{\href{https://apps.apple.com/in/app/desi-dairies/id1642359792}{Desi Diaries Pvt. Ltd. | Jaipur}}}{Dec 2022 -- May 2023}
+\begin{itemize}
+  \item Released a {\bfseries Flutter} app with {\bfseries Laravel API} integration after resolving 5+ publishing challenges on Play Store and App Store
+  \item Implemented {\bfseries video reels streaming} using F4F fragments, reducing buffering by 35\%
+\end{itemize}
+
+% PROJECTS
+\Section{Projects}
+\textbf{\href{https://apps.apple.com/in/app/budi-travel/id6464050697}{Budi Travel (App)}} - Minister of Public Administration, Trinidad and Tobago
+\begin{itemize}
+  \item Led backend development with {\bfseries Django} + {\bfseries MySQL}, and contributed to the {\bfseries Flutter} app for booking and user management 
+  \item Published the app on both the {\bfseries Play Store} and {\bfseries App Store} after resolving complex publishing challenges
+\end{itemize}
+\vspace*{-0.1cm}
+\textbf{Happy Paws (App)} - Apple Animal Society, Kota 
+\begin{itemize}
+  \item Designed and Shipped a full-stack app using {\bfseries Flask (JWT, REST)} with a {\bfseries Flutter} App, backend hosted via {\bfseries Docker + AWS}
+  \item Integrated {\bfseries Redis} caching and modular APIs to improve response time by 40\%\\[4pt]
+\end{itemize}
+\vspace*{-0.7cm}
+\textbf{\href{https://github.com/AnkushSinghGandhi/realtime_process_scheduler}{Real-time Scheduler (Python GUI)}} - Personal Project
+\begin{itemize}
+  \item Engineered a Python GUI to visualize {\bfseries CPU scheduling} algorithms ({\bfseries FCFS, SJF, RR})
+  \item Delivered {\bfseries real-time} updates to enhance algorithm comprehension during self-study and demos\\[4pt]
+\end{itemize}
+\vspace*{-0.7cm}
+
+% ACHIEVEMENTS
+\Section{Achievements}
+\vspace*{-0.7cm}
+\begin{itemize}
+  \item Achieved {\bfseries Top Voice (Computer Science)} status on {\bfseries LinkedIn} — blogs reached {\bfseries 40,000+ views}.
+  \item Selected among {\bfseries 160+ tech leaders} from India for {\bfseries GitHub Field Day 2021}.
+  \item Secured {\bfseries global rank 169} in Girl Script Summer of Code (GSSoC)
+\end{itemize}
+
+% EDUCATION
+\Section{Education}
+\JobLine{{\bfseries Bachelor of Technology (B.Tech), Computer Science}, Poornima Group of Institutions, Jaipur}{Jan 2018 -- Jan 2022}\\
+\vspace*{-0.7cm}
+\begin{itemize}
+  \item Core Courses: {\bfseries OS}, {\bfseries DBMS}, {\bfseries Networks}, {\bfseries Algorithms}, {\bfseries Compilers}
+\end{itemize}
+% SKILLS
+\Section{Skills}
+\begin{tabular*}{\textwidth}{@{}p{0.22\textwidth}@{\extracolsep{6pt}}p{0.72\textwidth}@{}}
+{\bfseries Languages:} & Python, C \\
+{\bfseries Frameworks:} & Flask, Django \\
+{\bfseries APIs \& Architecture:} & REST APIs, API Development, Microservices Architecture \\
+{\bfseries Libraries \& Tools:} & NumPy, Pandas, Beautiful Soup, Selenium, Pygame, Tkinter, Flutter \\
+{\bfseries Databases:} & MySQL, MongoDB, Redis \\
+{\bfseries DevOps \& Cloud:} & Docker, GitHub Actions, AWS, WebSockets, Linux, Git \\
+{\bfseries Other:} & WebSockets, Unit Testing, Agile/Scrum, ChatGPT \\
+\end{tabular*}
+
+\end{document}
